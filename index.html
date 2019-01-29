@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>BitCoin Ichip</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/accordian.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var url = window.location.href;
+            var vars = {};
+            var exist = url.indexOf('track_id')
+            var secondId = url.indexOf('clickid')
+            if(exist>0){
+                var hashes = url.split("?")[1];
+                var hash = hashes.split('&');
+
+                for (var i = 0; i < hash.length; i++) {
+                    params=hash[i].split("=");
+                    vars[params[0]] = params[1];
+                }
+                document.cookie = `trackId=${vars.track_id}`;
+                document.getElementById('buyToken').href = 'https://ico.bitcoinichip.com/?track_id='+vars.track_id;
+            }else if(secondId>0){
+                var hashes = url.split("?")[1];
+                var hash = hashes.split('&');
+
+                for (var i = 0; i < hash.length; i++) {
+                    params=hash[i].split("=");
+                    vars[params[0]] = params[1];
+                }
+                document.cookie = `clickId=${vars.clickid}`;
+                document.getElementById('buyToken').href = 'https://ico.bitcoinichip.com/?clickid='+vars.clickid+'&pid='+vars.pid;
+            }else{
+                document.getElementById('buyToken').href = 'https://ico.bitcoinichip.com/';
+            }
+        })
+        </script>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+</head>
+<script>
+new WOW().init();
+</script>
+
+<body>
+    <header id="header-section" class="header-section">
+        <div class="topheader">
+            <div class="main_header">
+                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-6 logo">
+                    <a href="index.html"> <img src="img/bit-coinnew.png" alt="Barret-coin" /> </a></div>
+                <!--********navigation*************-->
+                <div class="col-md-10 col-lg-10 col-sm-10 col-xs-6 header_navigation">
+                    <nav id="mainNav" class="navbar">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tutormenu">
+                                <i class="fa fa-bars"></i> </button>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="tutormenu">
+                            <ul class="nav navbar-nav pull-right menu">
+                                <li class="menu_item"><a class="scroll" href="#about">About Us</a></li>
+                                <li class="menu_item"><a target="_blank" href="https://github.com/adminbitcoinichip/BitcoinIchip">Smart Contract</a></li>
+                                <li class="menu_item active"><a class="scroll" href="#affiliate">Affiliate Program</a></li>
+                                <li class="menu_item"><a class="scroll" href="#game">Games</a></li>
+                                <li class="menu_item active"><a class="scroll" href="#price">ICO</a></li>
+                                <li class="menu_item"><a class="scroll" href="#roadmap">Roadmap</a></li>
+                                <li class="menu_item"><a class="scroll" href="#solution">Solutions</a></li>
+                                <li class="menu_item"><a class="scroll" href="#faq">FAQ</a></li>
+                                <li class="menu_item"><a class="" href="img/BitcoiniChip_whitepaper.pdf" target="_blank">White Paper</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <script>
+        var main = main = $('#mainNav ul');
+        $('.scroll').click(function(event) {
+            event.preventDefault();
+            var full_url = this.href,
+
+                parts = full_url.split('#'),
+
+                trgt = parts[1],
+
+                target_offset = $('#' + trgt).offset(),
+
+                target_top = target_offset.top;
+
+            $('html, body').animate({ scrollTop: target_top }, 500);
+            main.children().removeClass();
+            $(this).parent().addClass('active');
+        });
+        </script>
+    </header>
+        <div  style="background-color:yellow; height:110px;margin-top:80px;" class="text-center">
+            <h3 class="heading-top wow">
+                Announcements
+            </h3>
+            <p style="font-size: medium;font-family: lato2;">BIC is now successfully listed on <a class="trus" target="_blank" style="font-weight:bold" href="https://www.coinexmarket.io/">CoinexMarket.io</a></p>
+            <p style="font-size: medium;font-family: lato2;">BIC is now successfully listed on <a class="trus" target="_blank" style="font-weight:bold" href="https://play.google.com/store/apps/details?id=multi.erc20.devgenesis.token.wallet" >Ethereum & ERC20 Tokens Wallet</a> available on Android Play Store. This wallet can be used to store Ethereum and other ERC20 tokens.</p>
+        </div>
+    <div id="particles-js"></div>
+    <div class="buttons">
+        <h2  style="margin-top:125px;">ICO has ended</h2>
+        <!-- <div class="timer_wrap">
+            <div id="counter" class="countdownHolder">
+                <div class="countDays"><span class="boxName"><span class="Days">Days</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span>
+                </div><span class="points">:</span><span class="countDiv countDiv0"></span>
+                <div class="countHours"><span class="boxName"><span class="Hours">Hours</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span>
+                </div><span class="points">:</span><span class="countDiv countDiv1"></span>
+                <div class="countMinutes"><span class="boxName"><span class="Minutes">Minutes</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span>
+                </div><span class="points">:</span><span class="countDiv countDiv2"></span>
+                <div class="countSeconds"><span class="boxName"><span class="Seconds">Seconds</span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span><span class="position"><span class="digit static" style="top: 0px; opacity: 1;"></span></span>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="token-sale">
+        <a id='buyToken' class="button1 a_btn">Buy Token</a>
+        <a href="img/BitcoiniChip_whitepaper.pdf" target="_blank" class="button1 a_btn new-button" download>Download Whitepaper</a>
+    </div>
+    <!-- scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <!-- stats.js -->
+    <script src="js/lib/stats.js"></script>
+    
+    <section class="body-section" id="about">
+        <div class="container">
+            <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn;">About Us</h3>
+            <div class="ser-t">
+                <b></b>
+                <b class="line"></b> </div>
+            <div class="col-md-12 col-lg-12  col-xs-12 col-sm-12 wow fadeInUp" data-wow-duration="1500ms;">
+                <div class="body-section-img">
+                    <p>Bitcoin Ichip provides an online gambling platform which is Secure, Anonymous and Faster as compared to other betting platforms. Ensuring security and minimizing the risks in transactions were one of the main focuses of our team because, at the end of the day, it is the user satisfaction that matters the most to us.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="solving-betting">
+        <div class="container">
+            <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn; color:#fff">Solving Betting Problems</h3>
+            <div class="ser-t">
+                <b></b>
+                <b class="line"></b> </div>
+            <p class="solv-para">The current betting industry has various issues that must be addressed. We at Bitcoin Ichip are determined for solving each and every issue and provide creative solutions, virtue of our brilliant team which understands this arena very well.
+            </p>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 solving">
+                    <div class="step wow zoomIn" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: zoomIn;">
+                        <div class="solving-betting-ico">
+                            <img src="img/c1.png">
+                            <p>Lack of Transparency</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 solving">
+                    <div class="step wow zoomIn" data-wow-delay="150ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: zoomIn;">
+                        <div class="solving-betting-ico">
+                            <img src="img/c2.png">
+                            <p>Confusing Regulations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 solving">
+                    <div class="step wow zoomIn" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: zoomIn;">
+                        <div class="solving-betting-ico">
+                            <img src="img/c3.png">
+                            <p>Data at Risk
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12solving">
+                    <div class="step wow zoomIn" data-wow-delay="100ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: zoomIn;">
+                        <div class="solving-betting-ico">
+                            <img src="img/c4.png">
+                            <p>Low speed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 solving">
+                    <div class="step wow zoomIn" data-wow-delay="150ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: zoomIn;">
+                        <div class="solving-betting-ico">
+                            <img src="img/c6.png">
+                            <p>High transaction cost
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 solving">
+                    <div class="step wow zoomIn" data-wow-delay="200ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 100ms; animation-name: zoomIn;">
+                        <div class="solving-betting-ico">
+                            <img src="img/c5.png">
+                            <p>Biased to bookmaker
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bitcoin-trustless" id="solution">
+        <div class="container">
+            <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn; color:#fff">Bitcoin ichip solutions
+            </h3>
+            <div class="ser-t">
+                <b></b>
+                <b class="line"></b>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <img src="img/turstless1.png">
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <p class="trus">Transparent, Reliable and Fast. Our complete system is built around these fundaments.
+                    <br>
+                    <br> Backed by the blockchain technology, we are able to to provide a secure platform for players from all over the world.
+                    <br>
+                    <br> To separate ourselves from others, it was important for us to build a system that would not just eradicate the existing problems but also give some uniqueness to the industry.
+                    <br>
+                    <br> We understand what our users expect from us and the system. keeping that the centre point of our process, we have emphasized heavily on complete player satisfaction. Other than gambling, the Bitcoin Ichip token can also be used for trading purposes.</p>
+            </div>
+        </div>
+    </section>
+    <section class="barret-feature">
+        <div class="container">
+            <div class="row">
+                <h3 class="heading-top barret-heading wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn;">Understanding Bitcoin Ichip</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b> </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 barret-para ">
+                    <div class="ichip-outer step wow zoomIn " data-wow-delay="100ms" data-wow-duration="1500ms">
+                        <div class="text-center">
+                            <img src="img/roulette.png">
+                        </div>
+                        <h3 class="decent">Platform</h3>
+                        <p class="para-decent">Bitcoin Ichip offers a platform where users can come and buy tokens to place bets at various gambling platforms associated with us. Our decentralized system ensures complete security and fairness in the games you play. Maintaining trust of our users is our paramount objective.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 barret-para ">
+                    <div class="ichip-outer step wow zoomIn " data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div class="text-center">
+                            <img src="img/Deselect.png">
+                        </div>
+                        <h3 class="decent">Potential</h3>
+                        <p class="para-decent">The rise of various crypto currencies is not hidden from anyone. Bitcoin Ichip is expected to witness the same rise because of its limited supply. This provides owners of Bitcoin Ichip tokens to earn really good money in a very short period.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 barret-para ">
+                    <div class="ichip-outer step wow zoomIn " data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="text-center">
+                            <img src="img/gamblingcircle.png">
+                        </div>
+                        <h3 class="decent">Benefits</h3>
+                        <p class="para-decent">Bitcoin Ichip token can be used in more than just one way. Other than using it for placing bets online, owners can also trade their tokens whenever they wish to.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 barret-para">
+                    <div class=" ichip-outer step wow zoomIn " data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="text-center">
+                            <img class="bit-p1" src="img/visa.png">
+                        </div>
+                        <h3 class="decent">Ecosystem</h3>
+                        <p class="para-decent">There are many gambling platforms already associated with us. We are constantly in process of adding more bookers to our list. This will add more oxygen to our system, giving our users more options for placing their bets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="body-section" id="price">
+        <div class="container">
+            <h3 class="heading-top">ICO Daily limit for per account. Min 250 and Max 25000 BIC</h3>
+            <div class="row text-center" style="padding: 10px 0px;">
+                <div class="col-md-4">
+                    <p class="ico">210,000,000 Total Supply</p>
+                </div>
+                <div class="col-md-4">
+                    <p span class="ico">7 Sale Phase</p>
+                </div>
+                <div class="col-md-4">
+                    <p span class="ico">161,700,000 ICO Supply</p>
+                </div>
+            </div>
+            <h3 class="pricee heading-top wow" style="padding: 20px 0px;">Price Table</h3>
+            <div class="table-details-container">
+                <div class="table-responsive">
+                    <table class="table table-details">
+                        <thead>
+                            <tr>
+                                <th class="title"> Phases</th>
+                                <th class="value">
+                                    <span class="patch"></span> Date
+                                </th>
+                                <th class="value">
+                                    <span class="patch"></span> Max BIC Token
+                                </th>
+                                <th class="value">
+                                    <span class="patch"></span> Price
+                                </th>
+                                <th class="value">
+                                    <span class="patch"></span> Status
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="title">Pre ICO Sale</td>
+                                <td class="amount">18th-31st March 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.1</td>
+                                <td class="amount" style="color:#ee0202">Over</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" class="title" style="padding: 100px 0px;">Public Sale </td>
+                                <td class="value white rtl">Phase 1 - &nbsp;&nbsp; 01st-10th April 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.12</td>
+                                <td class="amount" style="color:#ee0202">Over</td>
+                            </tr>
+                            <tr>
+                                <td class="value white rtl">Phase 2 - &nbsp;&nbsp; 11th-20th April 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.15</td>
+                                <td class="amount" style="color:#ee0202">Over</td>
+                            </tr>
+                            <tr>
+                                <td class="value white rtl">Phase 3 - &nbsp;&nbsp; 21st-30th April 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.16</td>
+                                <td class="amount" style="color:#ee0202">Over</td>
+                            </tr>
+                            <tr>
+                                <td class="value white rtl">Phase 4 - &nbsp;&nbsp; 01st-10th May 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.18</td>
+                                <td class="amount" style="color:#ee0202">Over</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="title" style="padding: 7px 0px;">Post ICO Sale </td>
+                                <td class="value white rtl">&nbsp;&nbsp; 11th-05th May / June 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.2</td>
+                                <td class="amount" style="color:#ee0202">Over</td>
+                            </tr>
+                            <!-- <tr>
+                                <td class="value white rtl">Phase 2 - &nbsp;&nbsp; 16th-30th June 2018</td>
+                                <td class="amount">20M</td>
+                                <td class="amount">$0.25</td>
+                                <td class="amount">Waiting</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </section>
+    <div class="ecosystem" id="game">
+        <div class="ct1k2 container">
+            <div class="ecoCloud">
+                <div class="containtexts">
+                    <p class="text1"><a class="neona1">Blackjack</a></p>
+                    <p class="text2"><a class="neona2">Teen Patti</a></p>
+                    <p class="text3"><a class="neona3">Poker</a></p>
+                    <p class="text4"><a class="neona4">Lottery</a></p>
+                    <p class="text5"><a class="neona5">8 Ball Pool</a></p>
+                    <p class="text6"><a class="neona6">Casino</a></p>
+                    <h2 style="position: absolute;top: 51%;left:31%" tkey="ecosystem">Ecosystem</h2>
+                </div>
+            </div>
+            <!--end ecoCloud-->
+            <!--<a href="javascript:;" class="btnViewmore" tkey="more_ecosystem">MORE</a>-->
+        </div>
+        <!--end ct1k2-->
+    </div>
+    <section class="our-team">
+        <div class="container">
+            <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn;">Meet Our Team</h3>
+            <div class="row">
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                        <img src="img/img9.jpg">
+                        <div class="team-detail">
+                        <h3 class="name">Sathish Kumar</h3>
+                        <p class="paga-details">Chief Executive Officer</p>
+                        <a href="https://www.linkedin.com/in/sathish-kumar-08a5445b/" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                    <img src="img/img2.jpg">
+                    <div class="team-detail">
+                        <h3 class="name">Himanshu Pandey</h3>
+                        <p class="paga-details">Chief Technical Officer</p>
+                        <a href="http://linkedin.com/in/himanshu-pandey-254b67a8" target="_blank">
+                        <i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                    <img src="img/img4.jpg">
+                    <div class="team-detail">
+                        <h3 class="name">Malay Tripathi</h3>
+                        <p class="paga-details">Blockchain Architect</p>
+                        <a href="http://linkedin.com/in/malaytripathi" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                    <img src="img/img12.jpg">
+                    <div class="team-detail">
+                        <h3 class="name">Ravi Arya</h3>
+                        <p class="paga-details">Project Manager</p>
+                        <i class="fa fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                <img src="img/img3.jpg">
+                <div class="team-detail">
+                    <h3 class="name">Rahul Singh</h3>
+                    <p class="paga-details">Lead Software Engineer</p>
+                    <a href="http://linkedin.com/in/rahul-singh-99a313147" target="_blank">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                    <img src="img/img6.jpg">
+                    <div class="team-detail">
+                        <h3 class="name">Shikhar Srivastava</h3>
+                        <p class="paga-details">Ethereum Developer</p>
+                        <a href="https://www.linkedin.com/in/shikhar-srivastava-44a43958/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                    <img src="img/img8.jpg">
+                    <div class="team-detail">
+                        <h3 class="name">Shivam Gupta</h3>
+                        <p class="paga-details">Marketing Manager</p>
+                        <a href="https://www.linkedin.com/in/shivam-gupta-blockchainadvisor/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 team">
+                    <img src="img/img11.jpg">
+                    <div class="team-detail">
+                        <h3 class="name">Kaushik Ghosh</h3>
+                        <p class="paga-details">Smart Contract Developer</p>
+                        <a href="https://www.linkedin.com/in/kaushik-ghosh-97443914a/" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="graph" class="graph-one">
+        <div id="particles-js2">
+            <canvas class="particles-js-canvas-el" width="1349" height="675" style="width: 100%; height: 100%;"></canvas>
+        </div>
+        <div class="container wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+            <div class="section-header">
+                <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn;">TOKEN DISTRIBUTION</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+                <p style="font-size: 15px;text-align: center;">Total Supply : 210 million BIC Tokens</p>
+            </div>
+            <div class="row graph-section">
+                <div class="col-md-6 offset-md-3 list-the-pinns   wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                </div>
+            </div>
+            <div class="row scond-graph-section">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="graph-img" style="text-align: center;">
+                        <img src="img/g3.png">
+                    </div>
+                </div>
+            </div>
+            <div class="section-header">
+                <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name:zoomIn;">DISTRIBUTION IN TOKEN SALE</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+            </div>
+            <div class="row graph-section">
+                <div class="col-md-6 offset-md-3 list-the-pinns   wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                </div>
+            </div>
+            <div class="row scond-graph-section">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                    <div class="graph1-img" style="text-align: center;">
+                        <img src="img/g4.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="roadmap" class="lbt-bg-gray">
+        <div class="lbt-block-wrapper lazy-load" data-sr-id="5" style=" visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; ">
+            <div class="lbt-block-inner">
+                <h3 class="heading-top barret-heading wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomIn; color:#fff;">Roadmap</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b>
+                </div>
+                <div class="lbt-col-ful">
+                    <img src="img/roadmap.png" alt="roadmap">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="media">
+        <div class="container">
+        
+        </div>
+    </section>
+    <div class="container-fluid">
+        <div class="row" style="background: #fff;">
+            <div class="container" id="faq">
+                <h3 class="heading-top wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomIn;padding-top: 40px;">FAQ</h3>
+                <div class="ser-t">
+                    <b></b>
+                    <b class="line"></b> </div>
+                <div class="col-md-12">
+                    <ul class="responsive-accordion responsive-accordion-default bm-larger">
+                        <li>
+                            <div class="responsive-accordion-head">1. What is ERC20 coin ?                                
+                                <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    Bitcoin Ichip’s token is based on ERC-20 protocol. ERC-20 defines a common list of rules for all Ethereum tokens to follow, meaning that this particular token empowers developers of all types to accurately predict how new tokens will function within the larger Ethereum system. ERC-20 token contracts come with a number of functions to allow users to find out the balances of accounts as well as to transfer them from one account to another under varying conditions.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">2. What is Bitcoin Ichip token ? <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    The bitcoin Ichip token is a digital currency that can be used for placing bets at various online betting platforms associated with the Bitcoin Ichip. It is based on the ERC-20 protocol which makes it safe and secure for transactions.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">3. How can I buy bitcoin ichip token ?<i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    Buying a bitcoin ichip token is as easy as pie. After registering on our website, your account is created. Using BTC or ETH, you can buy the bitcoin ichip token of the equivalent amount and it will get credited in your wallet.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">4. Will bitcoin ichip be listed in trading sites ?
+                                <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    Yes, the Bitcoin Ichip token will get listed on various exchanges once the ICO is over. We are proceeding 5 major exchanges.Further, we are dedicated to get listed on many more exchanges in the coming time.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">5. Can I use Bitcoin Ichip token for sports betting ?<i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    Sports betting is our next big target. We have already made some progress regarding it and not so long away, our users will be able to enjoy sports betting at bitcoin ichip.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">6. How do I know my bets are secure or not ? <i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    All the bets are secured using smart contract. All bets will be carried out fairly and transparently. Our smart contract will reward the right punters according to whatever their winnings would be.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">7. Online gambling is illegal in some places. Am I under any sort of risk when I play on Bitcoin Ichip's platform ?<i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    Irrespective of where ever you play from, Bitcoin Ichip does not violate any regulation of the betting industry. We have made sure with our efforts to provide a legal and interactive betting experience. So relax, you can enjoy placing your bets without falling into any trouble at all.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">8. I don't usually play games, Is bitcoin ichip useful for me ?<i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    It is absolutely fine if you don’t like to play betting games or games of any type, for that matter. You can purchase the Ichip token and use it in future for trading purposes. Since the supply of tokens is limited, its value is expected to rise with time. Hence, you can make money even without playing any games.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">9. Any age restrictions ?<i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    There is an age restriction on our token to keep the minors away from gambling. Users below the age of 18 will not be allowed to gamble. Other than that, there is no upper bar. Even if you are a century old, you can still enjoy our services.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="responsive-accordion-head">10. Is this the future payment system ?<i class="fa fa-chevron-down responsive-accordion-plus fa-fw"></i><i class="fa fa-chevron-up responsive-accordion-minus fa-fw" style="display: none;"></i></div>
+                            <div class="responsive-accordion-panel" style="display: none;">
+                                <p>
+                                    In future, the bitcoin Ichip token can be used for trading purposes. It is not necessary to use our token for gambling only. One can make use of his/her token to earn money by selling it off.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="footer-content" id="contact">
+        <div class="connect-formnew">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 border" id="join">
+                        <div class="row">
+                            <div class="col-lg-7">
+                            <h5 class="foot heading-top barret-heading pb-20 pdxs wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomIn;">Join Us Right Now !</h5>
+                            <div class="input-group pd">
+                                <input id="subemail" class="form-control" placeholder="Enter your email address">
+                                <span class="input-group-btn"> <button class="btn btn-default" onclick="subscription()" type="submit" >Subscribe</button> </span>
+                            </div>
+                        </div>
+                            <div class="col-lg-5">
+                            <h5 class="foot heading-top barret-heading pb-30 pdxs wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomIn;">Contact Us</h5>
+                            <div style="line-height: 1.5;text-align:center;">
+                            <ul class="footer-navigation inline-list footer-bit">
+                                <li>admin@bitcoinichip.com</li>
+                            </ul>
+                            </div>
+                            </div>
+                        </div>
+                        <div id="errsub"></div> 
+                    </div>
+                    <div class="col-lg-6 col-sm-6 text-center" id="join">
+                        <h5 class="foot heading-top pb-30 pdxs wow" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: zoomIn;">Important Links</h5>
+                        <ul class="footer-navigation inline-list footer-bit">
+                            <li><a class="nav-item" href="#about">About Us</a></li>
+                            <li><a class="nav-item" href="#game">Games</a></li>
+                            <li><a class="nav-item" href="#roadmap">Roadmap</a></li>
+                            <li><a class="nav-item" href="#price">ICO</a></li>
+                            <li><a class="nav-item" href="#faq">FAQ</a></li>
+                            <li><a href="img/BitcoiniChip_whitepaper.pdf" target="_blank">White paper</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 text-center" style="padding-top: 40px;">
+                        <ul class="social-network social-circle">
+                            <li><a href="https://m.facebook.com/BTC-ICHIP-807213942801222/" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/BitCoinchip" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCp85igXAgY-m8sla6LbzNZA" target="_blank" class="icoGoogle" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="https://github.com/adminbitcoinichip/BitcoinIchip" target="_blank" style="background-color:black" title="GitHub"><i class=""><img src="img/github.png" style="width:100%;vertical-align: middle;padding-bottom: 2px;"></i></a></li>
+                            <li><a href="https://bitcoinichip.slack.com/threads/team/U9RP3Q9TR" target="_blank" class="icoSlack" title="Slack"><i class="fa fa-slack"></i></a></li>
+                            <li><a href="https://t.me/joinchat/F7n3FFKEGjj32ePSJ6arog" target="_blank" class="icotelegram" title="Telegram"><i class="">
+                                <img src="img/telegram.png" style="width:40%;vertical-align: middle;padding-bottom: 2px;">
+                            </i></a></li>
+                            <li><a href="https://www.reddit.com/user/bitcoinsindia10/" target="_blank" class="icoReddit" title="Reddit"><i class="">
+                                <img src="img/reddit.png" style="width:50%;vertical-align: middle;padding-bottom: 2px;">
+                            </i></a></li>
+                            <li><a href="https://medium.com/@bitcoinsindia10" target="_blank" class="icoMedium" title="Medium"><i class="fa  fa-medium">
+                            </i></a></li>
+                            <li><a href="https://bitcointalk.org/index.php?topic=3254519.0" target="_blank" class="icoBitcointalk" title="Bitcointalk"><i class="">
+                                <img src="img/bitcointalk.png" style="width:60%;vertical-align: middle;padding-bottom: 4px;">
+                            </i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 text-center" style="padding-top: 40px;">
+                        <a href="https://etherscan.io/token/0xe8710C8C9D5fad016ce66E8a93d36a0fd7F39024" class=" nav-item" style="font-family:lato1;font-size: 15px;color:white;" target="_blank">Smart Contract Address: 0xe8710C8C9D5fad016ce66E8a93d36a0fd7F39024 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="copy-right" style="background:#222; padding:4px;">
+        <div class="col-md-12 copy-new" style="background: #222; padding: 10px 0px;">
+            <p class="copy" style="color:#fff; text-align:center; font-size:16px;">Copyright © 2018 BitcoinIchip - All rights reserved.</p>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.15.1/dist/sweetalert2.all.js"></script>
+    <script>
+    function subscription() {
+        var email = document.getElementById('subemail').value;
+        if (email == '' || email == null) {
+            document.getElementById('errsub').innerHTML = 'Please enter a valid email';
+        } else {
+            axios.post('https://ico.bitcoinichip.com/api/subscription', {
+                email: email
+            }).then((res) => {
+                if (res.data.status) {
+                    swal(
+                        'Successful',
+                        `${res.data.mess}`,
+                        'success'
+                    )
+                } else {
+                    swal(
+                        'Information',
+                        `${res.data.mess}`,
+                        'error'
+                    )
+                }
+            })
+        }
+    }
+    </script>
+       
+    <script>
+    $(document).ready(function() {
+        $('#Carousel').carousel({
+            interval: 3000
+        })
+    });
+    </script>
+    <script type="text/javascript"></script>
+    <script>
+    $('.count').each(function() {
+
+        $(this).prop('Counter', 0).animate({
+
+            Counter: $(this).text()
+
+        }, {
+
+            duration: 4000,
+
+            easing: 'swing',
+
+            step: function(now) {
+
+                $(this).text(Math.ceil(now));
+
+            }
+
+        });
+
+    });
+    </script> 
+    <script>
+    $(window).on('beforeunload', function() {
+
+        $(window).scrollTop(0);
+
+    });
+    </script>
+    <script src="js/accordian.js"></script>
+</body>
+
+</html>
